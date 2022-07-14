@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h1>IIFL Securities Companies Directory</h1>
+       <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" >
+        <li [ngbNavItem]="i+1" *ngFor="let item of companyList, let i = index">
+          <a ngbNavLink>{{item.label}}</a>
+          <ng-template ngbNavContent>
+            <div class="list-wrapper">
+                <ul>
+                  <li *ngFor="let name of item.companyName "><a href="">{{name}}</a></li>
+                </ul>
+               </div>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>
+
+
+

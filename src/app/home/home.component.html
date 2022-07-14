@@ -1,0 +1,196 @@
+
+<div class="container mt-5">
+  <div class="row section-headings">
+    <div class="col-3">
+     <span>Sector</span>
+    </div>
+    <div class="col-2">
+      <span>Market Cap (₹.Cr)</span>
+    </div>
+    <div class="col-1">
+      <span>Stocks</span>
+    </div>
+    <div class="col-1">
+      <span> Dividend(%)</span>
+    </div>
+    <div class="col-2">
+      <span>P/E</span>
+    </div>
+    <div class="col-2">
+      <span>Volume(Shares)</span>
+    </div>
+    <div class="col-1">
+      <span></span>
+    </div>
+   </div>
+
+    <ngb-accordion (click)="clickEvent()" [closeOthers]="true"   activeIds="ngb-panel-0">
+        <ngb-panel   id="static-1">
+          <ng-template ngbPanelTitle >
+           <div class="row section-title" >
+            <div class="col-3">
+              <a href="">Diamond, Gems and Jewelle...</a>
+            </div>
+            <div class="col-2">
+              <span>2,26,554.47</span>
+            </div>
+            <div class="col-1">
+              <span>15</span>
+            </div>
+            <div class="col-1">
+              <span>0.46</span>
+            </div>
+            <div class="col-2">
+             <span>49.25</span>
+            </div>
+            <div class="col-2">
+              <span>46,37,945.00</span>
+             </div>
+             <div class="col-1">
+              <a href=""> <svg [ngClass]="status ? 'rotated' : ''"  width="100%" height="100%" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                <path d="M9 1L5 5L1 1" stroke="#F26F21" stroke-width="2"></path>
+                </svg></a>
+             </div>
+           </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+           <div class="table-wrapper">
+             <table class="table table-borderless table-hover">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>CMP</th>
+                  <th>%Chg</th>
+                  <th>MCAP</th>
+                  <th> P/E</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of tableData">
+                  <td>{{item.cname}}</td>
+                  <td>{{item.cmp}}</td>
+                  <td>{{item.chg}}</td>
+                  <td>{{item.mcap}}</td>
+                  <td>{{item.mcap}}</td>
+                </tr>
+                </tbody>
+             </table>
+           </div>
+          </ng-template>
+        </ngb-panel>
+
+        <!-- 2 -->
+
+        <ngb-panel  id="static-2">
+          <ng-template ngbPanelTitle >
+           <div class="row section-title" >
+            <div class="col-3">
+              <a href="">Diamond, Gems and Jewelle...</a>
+            </div>
+            <div class="col-2">
+              <span>2,26,554.47</span>
+            </div>
+            <div class="col-1">
+              <span>15</span>
+            </div>
+            <div class="col-1">
+              <span>0.46</span>
+            </div>
+            <div class="col-2">
+             <span>49.25</span>
+            </div>
+            <div class="col-2">
+              <span>46,37,945.00</span>
+             </div>
+             <div class="col-1">
+              <a href=""> <svg [ngClass]="status ? 'rotated' : ''"  width="100%" height="100%" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                <path d="M9 1L5 5L1 1" stroke="#F26F21" stroke-width="2"></path>
+                </svg></a>
+             </div>
+           </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+           <div class="table-wrapper">
+             <table class="table table-borderless table-hover">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>CMP</th>
+                  <th>%Chg</th>
+                  <th>MCAP</th>
+                  <th> P/E</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of tableData">
+                  <td>{{item.cname}}</td>
+                  <td>{{item.cmp}}</td>
+                  <td>{{item.chg}}</td>
+                  <td>{{item.mcap}}</td>
+                  <td>{{item.mcap}}</td>
+                </tr>
+                </tbody>
+             </table>
+           </div>
+          </ng-template>
+        </ngb-panel>
+
+        <!-- 3 -->
+        <ngb-panel  id="static-3">
+          <ng-template ngbPanelTitle >
+           <div class="row section-title" >
+            <div class="col-3">
+              <a href="">Diamond, Gems and Jewelle...</a>
+            </div>
+            <div class="col-2">
+              <span>2,26,554.47</span>
+            </div>
+            <div class="col-1">
+              <span>15</span>
+            </div>
+            <div class="col-1">
+              <span>0.46</span>
+            </div>
+            <div class="col-2">
+             <span>49.25</span>
+            </div>
+            <div class="col-2">
+              <span>46,37,945.00</span>
+             </div>
+             <div class="col-1">
+              <a href=""> <svg [ngClass]="status ? 'rotated' : ''"  width="100%" height="100%" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                <path d="M9 1L5 5L1 1" stroke="#F26F21" stroke-width="2"></path>
+                </svg></a>
+             </div>
+           </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+           <div class="table-wrapper">
+             <table class="table table-borderless table-hover">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>CMP</th>
+                  <th>%Chg</th>
+                  <th>MCAP</th>
+                  <th> P/E</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of tableData">
+                  <td>{{item.cname}}</td>
+                  <td>{{item.cmp}}</td>
+                  <td>{{item.chg}}</td>
+                  <td>{{item.mcap}}</td>
+                  <td>{{item.mcap}}</td>
+                </tr>
+                </tbody>
+             </table>
+           </div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+</div>
+
+
+

@@ -1,0 +1,92 @@
+.section-headings{
+    border-bottom: 1px solid black;
+   margin: 0;
+   text-align: center;
+    span{
+    color: #999999;
+    font-size: 12px;
+    line-height: 21px;
+    padding: 10px;
+    }
+}
+::ng-deep.accordion{
+    .card{
+        border: 0;
+        .card-header{
+            background-color: transparent;
+            padding: 0;
+            border: 0;
+            border: 0;
+             border-bottom:1px dotted #dfdfdf ;
+
+             .section-title{
+                padding: 10px 0px;
+                // -webkit-box-shadow: 0 8px 6px -6px #bfbaba;
+                // -moz-box-shadow: 0 8px 6px -6px #bfbaba;
+                // box-shadow: 0 8px 6px -6px #bfbaba;
+             
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000000;
+                    cursor: pointer;
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000000;
+                    cursor: pointer;
+                    svg{
+                        width: 16px;
+                        transition-duration: 0.5s;
+                         transition-property: transform;
+                        
+                        &.rotated{
+                            -moz-transform:rotate(180deg);
+                            -webkit-transform:rotate(180deg);
+                            transform:rotate(180deg);
+                        } 
+                    }
+                }
+             }
+        }
+        .btn-link{
+            width: 100%;
+            border-bottom:1px dotted #dfdfdf ;
+            &:hover{
+                background-color: #f7f8f9;
+                text-decoration: none;
+            }
+           
+           
+           
+            &:focus{
+                text-decoration: none;
+            }
+        }
+        .card-body{
+            background-color: #f7f8f9;
+            .table-wrapper{
+                th{
+                    color: #999999;
+                    font-size: 12px;
+                    line-height: 21px;
+                    border-bottom: 2px solid #dfdfdf;
+                }
+                td{
+                    font-size: 12px;
+                     color: #333333;
+                    }
+                    tr{
+                        
+                        border-bottom: 2px solid #dfdfdf;
+                        &:last-of-type{
+                            border-bottom: 1px dotted #dfdfdf;
+                        }
+                }
+            }
+        }
+    }
+}
+
