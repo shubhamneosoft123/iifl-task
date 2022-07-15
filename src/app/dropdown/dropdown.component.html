@@ -1,16 +1,10 @@
-<div class="container mt-5">
+  <div class="container mt-5">
     <div class="dropdown-wrapper">
-        <div class="col">
             <div ngbDropdown class="d-inline-block">
-              <button type="button" class="btn btn-dropdown" id="dropdownBasic1" ngbDropdownToggle>Equity</button>
+              <button type="button"   class="btn btn-dropdown"  id="dropdownBasic1" ngbDropdownToggle>{{dropDownSelector}}</button>
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem>Equity</button>
-                <button ngbDropdownItem>Debt</button>
-                <button ngbDropdownItem>Balanced</button>
-                <button ngbDropdownItem>ELSS</button>
-                <button ngbDropdownItem>ETF</button>
+                <button *ngFor="let item of fundsName" ngbDropdownItem [ngClass]="dropDownSelector == item? 'active' :''" (click)="ngDropDwonClick(item)">{{item}}</button>
               </div>
             </div>
-          </div>
     </div>
-</div>
+  </div>

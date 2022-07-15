@@ -12,4 +12,11 @@ export class DropdownComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  dropDownSelector = "Equity";
+
+  ngDropDwonClick(value) {
+    this.dropDownSelector = value;
+  }
+  fundsName=["Equity","Debt","Balanced","ELSS","ETF"]
+
 }

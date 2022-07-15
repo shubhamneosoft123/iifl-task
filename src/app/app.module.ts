@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CompaniesDirectoryComponent } from './companies-directory/companies-directory.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { SeletfieldComponent } from './seletfield/seletfield.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     HomeComponent,
     AboutComponent,
     CompaniesDirectoryComponent,
-    DropdownComponent
+    DropdownComponent,
+    SeletfieldComponent
   ],
   imports: [
     BrowserModule,
