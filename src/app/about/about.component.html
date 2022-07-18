@@ -3,12 +3,12 @@
     <table class="table table-borderless table-hover">
       <thead>
         <tr>
-          <th><span>Sector</span></th>
-          <th><span>Market Cap (₹.Cr)</span></th>
-          <th><span>Stocks</span></th>
-          <th><span>Dividend(%)</span></th>
-          <th><span>P/E</span></th>
-          <th><span>Volume(Shares)</span></th>
+          <th><span class="head-title">Sector</span></th>
+          <th><span class="head-market">Market Cap (₹.Cr)</span></th>
+          <th><span class="head-stocks">Stocks</span></th>
+          <th><span class="head-dividend">Dividend(%)</span></th>
+          <th><span class="head-pe">P/E</span></th>
+          <th><span class="head-volume">Volume(Shares)</span></th>
           <th></th>
         </tr>
         </thead>
@@ -16,21 +16,20 @@
   </div>
  
   <ngb-accordion #acc="ngbAccordion"   [closeOthers]="true">
-    <ngb-panel id="toggle-{{i+1}}"  *ngFor="let item of panelName, let i = index">
-      <ng-template ngbPanelHeader>
-          <button ngbPanelToggle class="btn btn-link p-0 w-100" (click)="clickEvent(i+1)">
+    <ngb-panel id="toggle-{{i+1}}"   *ngFor="let item of panelName, let i = index">
+      <ng-template ngbPanelHeader [ngClass]="status? 'active' : ''">
+          <button ngbPanelToggle   class="btn btn-link p-0 w-100" (click)="toggleIcon(i)">
             <table class="table table-borderless text-left">
               <thead>
                 <tr>
                   <th *ngFor="let pitem of item.pname"><span>{{pitem}}</span></th>
-                  <th><img [ngClass]="status ? 'rotated' : ''" src="../../assets/icons/collapse-open-icon.svg" alt=""></th>
+                  <th><img [ngClass]="toggle[i] ? 'rotated': ''" src="/assets/icons/collapse-open-icon.svg" alt=""></th>
                 </tr>
               </thead>
             </table>
           </button>
       </ng-template>
     <ng-template ngbPanelContent>
-        
           <table class="table table-borderless table-hover">
            <thead>
              <tr>
@@ -51,7 +50,6 @@
              </tr>
              </tbody>
           </table>
-        
       </ng-template>
     </ngb-panel>
   </ngb-accordion>

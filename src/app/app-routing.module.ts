@@ -5,6 +5,7 @@ import { CompaniesDirectoryComponent } from './companies-directory/companies-dir
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { HomeComponent } from './home/home.component';
 import { SeletfieldComponent } from './seletfield/seletfield.component';
+import { TestDrodownComponent } from './test-drodown/test-drodown.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:"comanylist",component:CompaniesDirectoryComponent},
   {path:"dropdown",component:DropdownComponent},
   {path:"about",component:AboutComponent},
+  {path:"test-dropdown",component:TestDrodownComponent},
 ];
 
 @NgModule({

@@ -119,6 +119,11 @@ table{
                 font-size: 12px;
                 line-height: 21px;
                 padding: 10px;
+                &.head-title{
+                  
+                    width: 31%;
+                    background-color: red;
+                  }
                 }
         }
     }
@@ -126,8 +131,13 @@ table{
 }
 
 ::ng-deep.accordion{
+    
         .card{
+            &.active{
+                border: 1px solid green;
+            }
             border: 0;
+            
             .card-header{
                 background-color: transparent;
                 padding: 0;
@@ -137,6 +147,7 @@ table{
                 .btn-link{
                     width: 100%;
                     border-bottom:1px dotted #dfdfdf ;
+                    border-radius: 0px;
                     &:focus{
                        box-shadow: none;
                        text-decoration: none;
@@ -151,6 +162,7 @@ table{
                                     font-weight: bold;
                                     color: #000000;
                                     cursor: pointer;
+                                 
                                 }
                                 img{
                                     width: 16px;
@@ -167,32 +179,42 @@ table{
                         }
                         &:hover{
                             text-decoration: none;
-                        }         
+                        }
+                        // &.active{
+                        //      border: 1px solid #2dc06b;
+                        //      border-bottom: 0;
+                        // }   
+                       
                 }
-    }
+             }
 
-    .card-body{
-        background-color: #f7f8f9;
-        .table{
-            th{
-                color: #999999;
-                font-size: 12px;
-                line-height: 21px;
-                border-bottom: 2px solid #dfdfdf;
-            }
-            td{
-                font-size: 12px;
-                 color: #333333;
-                }
-                tr{
-                    
-                    border-bottom: 2px solid #dfdfdf;
-                    &:last-of-type{
-                        border-bottom: 1px dotted #dfdfdf;
+            .card-body{
+                background-color: #f7f8f9;
+                .table{
+                    th{
+                        color: #999999;
+                        font-size: 12px;
+                        line-height: 21px;
+                        border-bottom: 2px solid #dfdfdf;
                     }
+                    td{
+                        font-size: 12px;
+                        color: #333333;
+                        }
+                        tr{
+                            
+                            border-bottom: 2px solid #dfdfdf;
+                            &:last-of-type{
+                                border-bottom: 1px dotted #dfdfdf;
+                            }
+                    }
+                }
+            }
+
+            .collapse{
+                border: 1px solid #2dc06b;
+                border-top: 0;
             }
         }
-    }
-}
 }
 

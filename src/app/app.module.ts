@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CompaniesDirectoryComponent } from './companies-directory/companies-directory.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { SeletfieldComponent } from './seletfield/seletfield.component';
+import { TestDrodownComponent } from './test-drodown/test-drodown.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SeletfieldComponent } from './seletfield/seletfield.component';
     AboutComponent,
     CompaniesDirectoryComponent,
     DropdownComponent,
-    SeletfieldComponent
+    SeletfieldComponent,
+    TestDrodownComponent
   ],
   imports: [
     BrowserModule,
