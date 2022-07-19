@@ -1,14 +1,15 @@
 <div class="container">
+  <div class="main-wrapper">
   <div class="section-headings">
     <table class="table table-borderless table-hover">
       <thead>
         <tr>
-          <th><span class="head-title">Sector</span></th>
-          <th><span class="head-market">Market Cap (₹.Cr)</span></th>
-          <th><span class="head-stocks">Stocks</span></th>
-          <th><span class="head-dividend">Dividend(%)</span></th>
-          <th><span class="head-pe">P/E</span></th>
-          <th><span class="head-volume">Volume(Shares)</span></th>
+          <th class="head-title"><span >Sector</span></th>
+          <th class="head-market"><span >Market Cap (₹.Cr)</span></th>
+          <th class="head-stocks"><span >Stocks</span></th>
+          <th class="head-dividend"><span >Dividend(%)</span></th>
+          <th class="head-pe"><span >P/E</span></th>
+          <th class="head-volume"><span >Volume(Shares)</span></th>
           <th></th>
         </tr>
         </thead>
@@ -17,10 +18,10 @@
  
   <ngb-accordion #acc="ngbAccordion"   [closeOthers]="true">
     <ngb-panel id="toggle-{{i+1}}"   *ngFor="let item of panelName, let i = index">
-      <ng-template ngbPanelHeader [ngClass]="status? 'active' : ''">
-          <button ngbPanelToggle   class="btn btn-link p-0 w-100" (click)="toggleIcon(i)">
-            <table class="table table-borderless text-left">
-              <thead>
+      <ng-template ngbPanelHeader   >
+          <button ngbPanelToggle  [ngClass]="toggle[i] ? 'active-border': ''"  class="btn btn-link p-0 w-100" (click)="toggleIcon(i)">
+            <table  class="table table-borderless text-left table-wrapper">
+              <thead [ngClass]="toggle[i] ? 'b-shadow': ''">
                 <tr>
                   <th *ngFor="let pitem of item.pname"><span>{{pitem}}</span></th>
                   <th><img [ngClass]="toggle[i] ? 'rotated': ''" src="/assets/icons/collapse-open-icon.svg" alt=""></th>
@@ -53,6 +54,7 @@
       </ng-template>
     </ngb-panel>
   </ngb-accordion>
+</div>
 </div>
 
 

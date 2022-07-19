@@ -28,7 +28,14 @@ export class AboutComponent implements OnInit {
               chg:"	+ 2.35 (1.39%)",
               mcap:	208.62,
               pe:	17.46
-        }
+        },
+        {
+          cname:"Bata India",
+          cmp:171.25,
+          chg:"	+ 2.35 (1.39%)",
+          mcap:	208.62,
+          pe:	17.46
+    }
       ]
     } ,
     {

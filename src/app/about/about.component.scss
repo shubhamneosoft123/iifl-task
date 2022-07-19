@@ -114,16 +114,14 @@ table{
     tr{
         border-bottom: 1px solid #333;
         th{
+            
+              
             span{
                 color: #999999;
                 font-size: 12px;
                 line-height: 21px;
                 padding: 10px;
-                &.head-title{
-                  
-                    width: 31%;
-                    background-color: red;
-                  }
+               
                 }
         }
     }
@@ -133,9 +131,7 @@ table{
 ::ng-deep.accordion{
     
         .card{
-            &.active{
-                border: 1px solid green;
-            }
+           
             border: 0;
             
             .card-header{
@@ -154,9 +150,12 @@ table{
                        
                     }
                     
-                        table{
+                    .table-wrapper{
                             margin: 0;
+                           tr{
+                            
                             th{
+                                padding: 16px 13px 16px;
                                 span{
                                     font-size: 16px;
                                     font-weight: bold;
@@ -164,26 +163,45 @@ table{
                                     cursor: pointer;
                                  
                                 }
-                                img{
-                                    width: 16px;
-                                    transition-duration: 0.5s;
-                                     transition-property: transform;
-                                    
-                                    &.rotated{
-                                        -moz-transform:rotate(180deg);
-                                        -webkit-transform:rotate(180deg);
-                                        transform:rotate(180deg);
-                                    } 
+                                
+                                &:nth-child(1){
+                                    width: 31%;
+                                }
+                                &:nth-child(2){
+                                    width: 14%;
+                                }
+                                &:nth-child(3){
+                                    width: 11%;
+                                }
+                                &:nth-child(4){
+                                    width: 16%;
+                                }
+                                &:nth-child(5){
+                                    width: 11%;
+                                }
+                                &:nth-child(6){
+                                    width: 13%;
+                                }
+                                &:nth-child(7){
+                                    img{
+                                        width: 16px;
+                                        transition-duration: 0.5s;
+                                         transition-property: transform;
+                                        
+                                        &.rotated{
+                                            -moz-transform:rotate(180deg);
+                                            -webkit-transform:rotate(180deg);
+                                            transform:rotate(180deg);
+                                        } 
+                                    }
                                 }
                             }
+                           }
                         }
                         &:hover{
                             text-decoration: none;
                         }
-                        // &.active{
-                        //      border: 1px solid #2dc06b;
-                        //      border-bottom: 0;
-                        // }   
+                      
                        
                 }
              }
@@ -198,8 +216,9 @@ table{
                         border-bottom: 2px solid #dfdfdf;
                     }
                     td{
-                        font-size: 12px;
+                        font-size: 14px;
                         color: #333333;
+                        font-weight: 500;
                         }
                         tr{
                             
@@ -216,5 +235,38 @@ table{
                 border-top: 0;
             }
         }
+}
+.active-border{
+    border-left: transparent;
+    border: 1px solid #2dc06b;
+    border-radius: 0;
+     
+}
+.b-shadow{
+    // -webkit-box-shadow: 0 0 10px 0 #000000;
+    // -moz-box-shadow:0 0 10px 0 #000000;
+    //      box-shadow:0 0 10px 0 #000000;  
+    box-shadow: 0 6px 9px -2px grey;
+    border-bottom: 0;
+         position: relative;
+}
+
+.head-title{
+    width: 31%;
+  }
+  .head-market{
+    width: 14%;
+  }
+  .head-stocks{
+    width: 11%;
+  }
+  .head-dividend{
+    width: 16%;
+ }
+ .head-pe{
+    width: 11%;
+}
+.head-volume{
+    width: 16%;
 }
 
